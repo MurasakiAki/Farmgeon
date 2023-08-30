@@ -1,0 +1,32 @@
+[gd_scene load_steps=4 format=3 uid="uid://cprnrbytfrt1o"]
+
+[ext_resource type="Script" path="res://src/Room/Room.gd" id="1_jwe4q"]
+[ext_resource type="PackedScene" uid="uid://myilopi18aex" path="res://src/Room/Wall/wall.tscn" id="2_2v8q4"]
+[ext_resource type="PackedScene" uid="uid://dc6lxp8gtxkyt" path="res://src/Player/player.tscn" id="3_tt43k"]
+
+[node name="Room" type="Node2D"]
+script = ExtResource("1_jwe4q")
+
+[node name="Player" parent="." instance=ExtResource("3_tt43k")]
+z_index = 1
+position = Vector2(160, 104)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+anchor_mode = 0
+zoom = Vector2(5, 5)
+
+[node name="Wall" parent="." instance=ExtResource("2_2v8q4")]
+position = Vector2(32, -16)
+scale = Vector2(20, 1)
+
+[node name="Wall2" parent="." instance=ExtResource("2_2v8q4")]
+position = Vector2(352, -16)
+scale = Vector2(1, 12)
+
+[node name="Wall3" parent="." instance=ExtResource("2_2v8q4")]
+position = Vector2(32, 160)
+scale = Vector2(20, 1)
+
+[node name="Wall4" parent="." instance=ExtResource("2_2v8q4")]
+position = Vector2(16, -16)
+scale = Vector2(1, 12)
